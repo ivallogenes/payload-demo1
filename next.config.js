@@ -18,6 +18,11 @@ const nextConfig = {
           protocol: url.protocol.replace(':', ''),
         }
       }),
+      // Allow images from local network IP
+      {
+        protocol: 'http',
+        hostname: '192.168.56.101',
+      },
     ],
   },
   webpack: (webpackConfig) => {
